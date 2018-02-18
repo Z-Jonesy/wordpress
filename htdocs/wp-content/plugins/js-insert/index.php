@@ -25,14 +25,13 @@ function add_my_scripts()
     // PHP változók hozzáadása a scripthez
     wp_localize_script(
         'ajax-handler',
-        'ajaxOptions',
-        [
+        'ajax-Options',
+        array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'actionName' => 'it_ajax'
-        ]
+        )
     );
 }
-
 add_action('wp_enqueue_scripts', 'add_my_scripts');
 
 // style beszúrása
@@ -44,4 +43,16 @@ function add_my_style() {
         date('YmdHis')
     );
 }
-add_action('wp_enqueue_style', 'add_my_style');
+add_action('wp_enqueue_scripts', 'add_my_style');
+
+
+// Shortoode hozzáadása a WP rendszerhez
+function bartag_func( $atts ) {
+    $atts = shortcode_atts( array(
+        'foo' => 'no foo',
+        'baz' => 'default baz'
+    ), $atts, 'bartag' );
+
+    return "foo = {$atts['foo']}";
+}
+add_shortcode( 'bartag', 'bartag_func' );
