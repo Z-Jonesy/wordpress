@@ -60,7 +60,7 @@ function add_my_style() {
 add_action('wp_enqueue_scripts', 'add_my_style');
 
 
-// Shortoode hozzáadása a WP rendszerhez
+// Shortoode hozzáadása a WP rendszerhez, ez a default
 function bartag_func( $atts ) {
     $atts = shortcode_atts( array(
         'foo' => 'no foo',
