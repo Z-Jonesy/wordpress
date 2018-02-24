@@ -21,6 +21,8 @@ function crud_action_callback()
 
 add_action('wp_ajax_nopriv_crud_action', 'crud_action_callback');
 
+include 'class/insertjs.php';
+
 /*
 var req = new XMLHttpRequest;
 req.open('get', ajaxurl+'?action=crud_action');

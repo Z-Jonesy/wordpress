@@ -42,13 +42,6 @@ class ProductController
                 break;
         }
 
-        $result = call_user_func(
-            array(
-                $this->model,
-                $this->methodPairs[$this->method]
-            )
-        );
-
         echo json_encode($result);
         wp_die();
     }
