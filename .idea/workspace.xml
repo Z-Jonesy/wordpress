@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa2f817f-c100-4668-b043-df7a21e040c4" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductContoller.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/index.php" afterPath="$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/index.php" />
+      <change beforePath="$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductContoller.php" afterPath="$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductContoller.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,8 +65,8 @@
       <file leaf-file-name="ProductModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
+            <state relative-caret-position="198">
+              <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
               <folding>
                 <marker date="1519472919040" expanded="true" signature="624:651" ph="SELECT * FRO... ${$this}" />
                 <marker date="1519472919040" expanded="true" signature="624:657" ph="SELECT * FRO... $this" />
@@ -80,8 +79,8 @@
       <file leaf-file-name="ProductContoller.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductContoller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+            <state relative-caret-position="592">
+              <caret line="66" column="41" lean-forward="false" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -247,7 +246,7 @@
       <workItem from="1518938156152" duration="2371000" />
       <workItem from="1519455176854" duration="602000" />
       <workItem from="1519455878745" duration="1713000" />
-      <workItem from="1519463017984" duration="12635000" />
+      <workItem from="1519463017984" duration="14909000" />
     </task>
     <task id="LOCAL-00001" summary="add: php -&gt; jsscript">
       <created>1518855460412</created>
@@ -298,11 +297,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519473042686</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add: add CRUD basic functions">
+      <created>1519490218509</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1519490218509</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25398000" />
+    <option name="totallyTimeSpent" value="27672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="460" y="44" width="1401" height="995" extended-state="0" />
@@ -342,7 +348,8 @@
     <MESSAGE value="add: add bootstrap core files" />
     <MESSAGE value="add: add filter" />
     <MESSAGE value="add: add plugin product-listing and define class productModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: add plugin product-listing and define class productModel" />
+    <MESSAGE value="add: add CRUD basic functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: add CRUD basic functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -588,18 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="67" column="66" lean-forward="true" selection-start-line="67" selection-start-column="66" selection-end-line="67" selection-end-column="66" />
-          <folding>
-            <marker date="1519472919040" expanded="true" signature="624:651" ph="SELECT * FRO... ${$this}" />
-            <marker date="1519472919040" expanded="true" signature="624:657" ph="SELECT * FRO... $this" />
-            <marker date="1519472919040" expanded="true" signature="624:668" ph="SELECT * FRO... $this" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/db-tester/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -637,10 +632,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="26" column="21" lean-forward="true" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <marker date="1519472919040" expanded="true" signature="624:651" ph="SELECT * FRO... ${$this}" />
+            <marker date="1519472919040" expanded="true" signature="624:657" ph="SELECT * FRO... $this" />
+            <marker date="1519472919040" expanded="true" signature="624:668" ph="SELECT * FRO... $this" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/htdocs/wp-content/plugins/product-listing/class/ProductContoller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="25" column="17" lean-forward="false" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        <state relative-caret-position="592">
+          <caret line="66" column="41" lean-forward="false" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
           <folding />
         </state>
       </provider>
