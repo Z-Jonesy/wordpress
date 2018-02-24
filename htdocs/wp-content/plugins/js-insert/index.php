@@ -22,6 +22,14 @@ function add_my_scripts()
         true
     );
 
+    wp_enqueue_script(
+        'b_handler',
+        plugins_url('js-insert/js/bootstrap.min.js'),
+        ['jquery'],
+        date('YmdHis'),
+        true
+    );
+
     // PHP változók hozzáadása a scripthez
     wp_localize_script(
         'ajax-handler',
@@ -39,6 +47,12 @@ function add_my_style() {
     wp_enqueue_style(
         'page-style',
         plugins_url('js-insert/css/page-css.css'),
+        array(),
+        date('YmdHis')
+    );
+    wp_enqueue_style(
+        'b-style',
+        plugins_url('js-insert/css/bootstrap.min.css'),
         array(),
         date('YmdHis')
     );
