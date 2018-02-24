@@ -13,40 +13,54 @@
  */
 
 /* Adatbázis model */
-class ProductModel {
+
+class ProductModel
+{
 
     //adattábla neve
     private $table = 'wp_products';
 
-    public function printError( $message ) {
+    public function printError($message)
+    {
         return json_encode(array("error" => $message));
     }
 
     //lekérdezés
-    public function get($id=null) {
+    public function get($id = null)
+    {
         global $wpdb;
         $where = is_null($id) ? "" : "WHERE i = id";
-        return $wpdb->get_results(
+        $result = $wpdb->get_results(
             "SELECT * FROM $this->table $where"
         );
+        if (!is_null($id)) {
+            if (count($result)>0) {
+                return $result[0];
+            } else {
+                return null;
+            }
+        }
+        return $result;
     }
 
     //frissítés
-    public function update($data = null, $where = '', $limit = 1) {
+    public function update($data = null, $where = '', $limit = 1)
+    {
         global $wpdb;
         if (is_null($data)) {
             return printError('No data for the update');
         }
-        if ($where ==='') {
+        if ($where === '') {
             return $this->printError('No where érték in update');
         }
-          return $wpdb->update(
-              $this->table, $data, $where . "LIMIT $limit"
-          );
+        return $wpdb->update(
+            $this->table, $data, $where . "LIMIT $limit"
+        );
     }
 
     //Beszúrás
-    public function insert($data = null) {
+    public function insert($data = null)
+    {
         global $wpdb;
         if (is_null($data)) {
             return printError('No data for the insert');
@@ -59,12 +73,13 @@ class ProductModel {
 
 
     //Törlés
-    public function delete($id = null) {
+    public function delete($id = null)
+    {
         global $wpdb;
         if (is_null($id)) {
             return printError('No data for the delete');
         }
 
-        return $wpdb->delete( $this->table, array('id' => $id)  );
+        return $wpdb->delete($this->table, array('id' => $id));
     }
 }
