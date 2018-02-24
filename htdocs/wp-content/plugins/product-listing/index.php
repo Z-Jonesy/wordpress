@@ -10,8 +10,22 @@ License: MIT
 Text Domain: Product lister
 */
 
-//Product model
-include 'class/ProductModel.php';
-//Controller
+//CRUD kérések kezelése
+function crud_action_callback()
+{
+    include 'class/ProductModel.php';
+    include 'class/ProductController.php';
+    $controller = new ProductController();
+    wp_die();
+}
 
-//
+add_action('wp_ajax_nopriv_crud_action', 'crud_action_callback');
+
+/*
+var req = new XMLHttpRequest;
+req.open('get', ajaxurl+'?action=crud_action');
+req.onloadend = function(ev) {
+console.log(ev.target.response);
+}
+req.send;
+ */
